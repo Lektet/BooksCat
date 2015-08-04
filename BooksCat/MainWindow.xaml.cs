@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,20 @@ namespace BooksCat
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFieDialog = new OpenFileDialog();
+            openFieDialog.InitialDirectory = "c:\\";
+            openFieDialog.Filter = "pdf files (*.pdf)|*.pdf|All files (*.*)|*.*";
+            openFieDialog.FilterIndex = 1;
+
+         
+            if (openFieDialog.ShowDialog() == true)
+            {
+                
+            }
         }
     }
 }

@@ -6,15 +6,19 @@
     <Grid Margin="5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="100"/>
         </Grid.ColumnDefinitions>
         
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
         </Grid.RowDefinitions>
+
+        <ToolBar>
+            <Button Click="Button_Click" Content="{StaticResource AddFile}"></Button>
+        </ToolBar>
         
-        <ListView>
+        <ListView Grid.Row="1">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="{StaticResource FileName}"/>                    
